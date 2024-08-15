@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free Songs</title>
+  <link rel="stylesheet" href="song.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav{
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px;
+  top: 0;
+  position: sticky;
+}
+.nav .logo{
+  display: flex;
+  align-items: center;
+  font-size: 27px;
+  font-family: "Edu VIC WA NT Beginner",sans-serif;
+}
+.nav .logo i{
+  margin-right: 10px;
+  font-size: 40px;
+}
+.nav .search{
+  background-color: #fff;
+  height: 45px;
+  width:30%;
+  border-radius: 25px;
+}
+.nav .search input{
+  height: 100%;
+  border: none;
+  width: 85%;
+  padding: 8px;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 25px;
+}
+.nav .search i{
+  margin: 12px;
+}
+.nav .ul li{
+  display: inline-flex;
+  margin-right: 20px;
+  color: #fff;
+}
+.nav .ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.nav .bar{
+  display: none;
+}
+nav .hidden{
+  display: none;
+}
+.bar .cross{
+  display: none;
+}
+.hero{
+  background-color: #e1e8f2;
+  height: 70px;
+  width:100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.search_two{
+  background-color: #fff;
+  height: 70%;
+  width: 85%;
+  border-radius: 25px;
+  
+}
+.hero input{
+  height: 100%;
+  border: none;
+  width: 85%;
+  padding: 8px;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 25px;
+}
+.hero i{
+  margin: 12px;
+}
+.main{
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .song_one{
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4Pg45iekfm87gxHuixwwTKaxVKe8qP0Fi20Q0nabkS9Qjdg35vXrYauF0guJLm7rVYpM&usqp=CAU);
+  width: 46%;
+  height: 175px;
+  background-size: cover;
+  border-radius: 10px;
+  margin: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.song_one a{
+  color: #fff;
+  text-decoration: none;
+}
+.main .song_one i{
+  font-size: 2rem;
+  background: rgba(203, 206, 212, 0.18);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.page_main img{
+  width: 80%;
+  margin: 35px;
+}
+.page_main audio{
+  margin-left: 28px;
+}
+.page_main h1{
+  text-align: center;
+  margin-top: 5px;
+}
+.page_main h2{
+  margin: 8px;
+}
+.page_main h3{
+  margin: 8px;
+}
+footer{
+  background-color: black;
+  width: 100%;
+  height: 200px;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+}
+footer h1,h3{
+  margin: 7px 0;
+}
+
+
+.hero2 {
+  background-color: #444;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero2 h2 {
+  margin: 0;
+}
+
+.hero2 p {
+  margin: 20px 0;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 400px) {
+  .nav{
+    position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0; /* Stick to the top */
+  background-color: black; /* Ensure background is set, so content underneath does not show through */
+  z-index: 1000; /* Ensure it stays above other content */
+  }
+  .nav .search{
+    display: none;
+  }
+  .nav .ul{
+    display: none;
+  }
+  .nav .logo{
+    font-size: 1.14rem;
+  }
+  .nav .logo i{
+    font-size: 1.54rem;
+  }
+  .nav .bar{
+    display: flex;
+    font-size: 1.74rem;
+    margin: 8px;
+  }
+  nav .hidden{
+    display: none;
+    background-color: black;
+    color: #fff;
+  }
+  nav .hidden a{
+    color: #fff;
+    text-decoration: none;
+  }
+  nav .hidden li{
+    margin: 30px 25px;
+  }
+  .hero{
+  background-color: #e1e8f2;
+  height: 70px;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search_two{
+  background-color: #fff;
+  height: 70%;
+  width: 85%;
+  border-radius: 25px;
+  
+}
+.hero input{
+  height: 100%;
+  border: none;
+  width: 85%;
+  padding: 8px;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 25px;
+}
+.hero i{
+  margin: 12px;
+}
+}
+    </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav">
+        <div class="logo">
+          <i class="fa-solid fa-headphones" style="color: #ffffff;"></i> 
+           <h1>Free Songs</h1> 
+        </div>
+        <div class="search">
+          <input type="text" name="search" class="search" placeholder="Search_Songs..."><i class="fa-solid fa-magnifying-glass" style="color: gray;"></i>
+        </div>
+        <div class="ul">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="bar">
+           <i class="fa-solid fa-xmark cross" style="color: #ffffff;"></i>
+          <i class="fa-solid fa-bars bars" style="color: #ffffff;"></i>
+        </div>
+      </div>
+              <div class="hidden">
+                <ul>
+                                <li><a href="song.html">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Privacy policy</a></li>
+                </ul>
+              </div> 
+    </nav>
+  </header> 
+<div class="hero">
+  <div class="search_two">
+      <input type="text" name="search" class="search" placeholder="Search_Songs...">
+      <i class="fa-solid fa-magnifying-glass" style="color: gray;"></i>
+  </div>
+</div>
+<main class="page_main">
+  <div class="img">
+    <h1>Kabhi Main Kabhi Tum</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4Pg45iekfm87gxHuixwwTKaxVKe8qP0Fi20Q0nabkS9Qjdg35vXrYauF0guJLm7rVYpM&usqp=CAU" alt="img">
+  </div>
+  <audio autoplay controls src="https://github.com/Sm382/Song7/raw/main/song.mp3"></audio>
+  <h2>For Download:</h2>
+  <img src="https://raw.githubusercontent.com/Sm382/Pic1/main/Screenshot_20240812-203623_1.png" alt="img">
+  <h3>Click Three dots for download</h3>
+  <img src="https://raw.githubusercontent.com/Sm382/Pic2/main/Screenshot_20240812-203617_1.png" alt="img">
+  <h3>Click the download button and enjoy Free song.</h3>
+</main>
+<footer>
+  <h1>Free Songs</h1>
+  ©2024-2025
+  <h3>This website is capable for mobile.</h3>
+</footer>
+<script src="song.js"></script>
+<script>
+  // Function to handle search
+  function handleSearch() {
+    // Get the search input value and convert it to lowercase
+    const searchInput = document.querySelector('.hero .search_two input');
+    const query = searchInput.value.toLowerCase();
+  
+    // Get all song elements
+    const songs = document.querySelectorAll('.main .song_one');
+  
+    // Loop through each song and check if it matches the search query
+    songs.forEach(song => {
+      // For this example, we're assuming song names can be detected via 'data-title' attribute
+      const title = song.getAttribute('data-title').toLowerCase();
+  
+      if (title.includes(query)) {
+        song.style.display = ''; // Show song
+      } else {
+        song.style.display = 'none'; // Hide song
+      }
+    });
+  }
+  
+  // Add event listener to search input
+  document.querySelector('.hero .search_two input').addEventListener('input', handleSearch);
+  
+  // Toggle mobile navigation menu
+  const bar = document.querySelector(".bars");
+  const hidden = document.querySelector(".hidden");
+  const cross = document.querySelector(".cross");
+  
+  bar.addEventListener('click', event => {
+    hidden.style.display = 'flex';
+    bar.style.display = "none";
+    cross.style.display = "flex";
+  });
+  cross.addEventListener('click', event => {
+    hidden.style.display = 'none';
+    cross.style.display = 'none';
+    bar.style.display = 'flex';
+  });
+</script>
+</body>
+
+</html>
